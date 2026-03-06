@@ -5,9 +5,10 @@ body {
   color: #e5e7eb;
   background-color: #0f1115;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
-  background-size: 30px 30px;
+    linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+
+  background-size: 120px 36px;
 }
 
 header {
@@ -43,11 +44,20 @@ section {
 }
 
 .card {
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(120,170,255,0.35);
   padding: 1rem;
   border-radius: 8px;
   margin-top: 1rem;
-  background: #202632;
+
+  background: rgba(60,110,200,0.18);
+
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  background: rgba(80,130,220,0.28);
+  border-color: rgba(140,190,255,0.6);
+  transform: translateY(-2px);
 }
 
 h1, h2, h3 {
