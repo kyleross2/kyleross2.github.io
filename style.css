@@ -3,21 +3,19 @@ body {
   margin: 0;
   line-height: 1.6;
   color: #e5e7eb;
-  background-color: #111418;
-
-  /* subtle grid */
+  background-color: #0f1115;
   background-image:
-    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-  background-size: 32px 32px;
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 30px 30px;
 }
 
 header {
-  background: rgba(24, 28, 34, 0.9);
+  background: #171b22;
   color: #ffffff;
   padding: 2rem;
   text-align: center;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 nav a {
@@ -37,35 +35,35 @@ main {
 }
 
 section {
-  background: rgba(24, 28, 34, 0.92);
+  background: #1a1f27;
   margin-bottom: 1.5rem;
   padding: 1.5rem;
   border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .card {
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1rem;
   border-radius: 8px;
   margin-top: 1rem;
-  background: rgba(255,255,255,0.02);
+  background: #202632;
 }
 
 h1, h2, h3 {
   color: #f9fafb;
 }
 
-p {
+p, li {
   color: #d1d5db;
 }
 
 a {
-  color: #93c5fd;
+  color: #8ec5ff;
 }
 
 a:hover {
-  color: #bfdbfe;
+  color: #c6e2ff;
 }
 
 footer {
