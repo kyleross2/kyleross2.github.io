@@ -2,21 +2,32 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   line-height: 1.6;
-  background: #f7f7f7;
-  color: #222;
+  color: #e5e7eb;
+  background-color: #111418;
+
+  /* subtle grid */
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
 }
 
 header {
-  background: #1f2937;
-  color: white;
+  background: rgba(24, 28, 34, 0.9);
+  color: #ffffff;
   padding: 2rem;
   text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 nav a {
-  color: white;
+  color: #d1d5db;
   margin: 0 10px;
   text-decoration: none;
+}
+
+nav a:hover {
+  color: #ffffff;
 }
 
 main {
@@ -26,25 +37,39 @@ main {
 }
 
 section {
-  background: white;
+  background: rgba(24, 28, 34, 0.92);
   margin-bottom: 1.5rem;
   padding: 1.5rem;
   border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 .card {
-  border: 1px solid #ddd;
+  border: 1px solid rgba(255,255,255,0.08);
   padding: 1rem;
   border-radius: 8px;
   margin-top: 1rem;
+  background: rgba(255,255,255,0.02);
+}
+
+h1, h2, h3 {
+  color: #f9fafb;
+}
+
+p {
+  color: #d1d5db;
 }
 
 a {
-  color: #2563eb;
+  color: #93c5fd;
+}
+
+a:hover {
+  color: #bfdbfe;
 }
 
 footer {
   text-align: center;
   padding: 1rem;
-  color: #666;
+  color: #9ca3af;
 }
