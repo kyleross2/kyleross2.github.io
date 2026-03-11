@@ -81,8 +81,9 @@ body::after {
 }
 
 @keyframes gridFlash {
-  0%,
-  31.818% {
+
+  /* normal grid before beam finishes */
+  0%, 31.818% {
     background-image:
       linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
       linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
@@ -91,14 +92,25 @@ body::after {
       brightness(1);
   }
 
-  33% {
+  /* strong initial pulse */
+  32% {
     background-image:
-      linear-gradient(rgba(170,255,90,0.70) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(170,255,90,0.70) 1px, transparent 1px);
+      linear-gradient(rgba(170,255,90,0.85) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(170,255,90,0.85) 1px, transparent 1px);
     filter:
-      drop-shadow(0 0 4px rgba(210,255,150,0.35))
-      drop-shadow(0 0 10px rgba(170,255,90,0.20))
-      brightness(1.08);
+      drop-shadow(0 0 8px rgba(210,255,150,0.6))
+      drop-shadow(0 0 18px rgba(170,255,90,0.35))
+      brightness(1.15);
+  }
+
+  /* gradual fade */
+  34% {
+    background-image:
+      linear-gradient(rgba(170,255,90,0.45) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(170,255,90,0.45) 1px, transparent 1px);
+    filter:
+      drop-shadow(0 0 4px rgba(210,255,150,0.3))
+      brightness(1.05);
   }
 
   36.364% {
@@ -110,6 +122,7 @@ body::after {
       brightness(1);
   }
 
+  /* idle until next cycle */
   100% {
     background-image:
       linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
