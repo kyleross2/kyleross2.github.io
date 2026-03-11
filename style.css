@@ -18,12 +18,12 @@ body::before {
 
   background-image:
     linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(140,255,90,0.05) 1px, transparent 1px),
     radial-gradient(circle at top left, rgba(255,255,255,0) 0 1px, transparent 1.5px);
   background-size: 120px 36px, 120px 36px, 120px 36px;
   background-position: 0 0, 0 0, 0 0;
 
-  animation: gridFlash 22s linear infinite;
+  animation: gridFlash 22s linear infinite, gridWave 22s linear infinite;
 }
 
 body::after {
@@ -163,6 +163,16 @@ body::after {
       drop-shadow(0 0 0 rgba(170,255,90,0))
       brightness(1);
   }
+}
+
+@keyframes gridWave{
+  0%{background-position:0 0,0 0,0 0;opacity:1}
+  31.8%{background-position:0 0,0 0,0 0;opacity:1}
+  33%{background-position:-30px -8px,30px 8px,6px 3px;opacity:1;filter:drop-shadow(0 0 10px rgba(170,255,90,0.28))}
+  34.5%{background-position:-60px -16px,60px 16px,12px 6px;opacity:.8;filter:drop-shadow(0 0 6px rgba(170,255,90,0.18))}
+  36%{background-position:-90px -24px,90px 24px,18px 9px;opacity:.4;filter:none}
+  50%{opacity:0}
+  100%{background-position:0 0,0 0,0 0;opacity:0}
 }
 
 header,
