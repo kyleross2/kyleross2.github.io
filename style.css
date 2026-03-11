@@ -20,42 +20,94 @@ body::before {
     linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
   background-size: 120px 36px;
+
+  animation: gridFlash 22s linear infinite;
 }
 
 body::after {
   content: "";
   position: fixed;
   top: 0;
-  left: -12px;
-  width: 12px;
+  left: -6px;
+  width: 6px;
   height: 100vh;
   pointer-events: none;
   z-index: -1;
 
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(190,255,120,0.00) 15%,
-    rgba(190,255,120,0.15) 40%,
-    rgba(210,255,140,0.35) 50%,
-    rgba(190,255,120,0.15) 60%,
-    rgba(190,255,120,0.00) 85%,
-    transparent 100%
-  );
+  background:
+    linear-gradient(
+      90deg,
+      rgba(170,255,90,0.00) 0%,
+      rgba(170,255,90,0.10) 18%,
+      rgba(200,255,140,0.35) 34%,
+      rgba(235,255,210,0.98) 49.5%,
+      rgba(245,255,230,1) 50%,
+      rgba(235,255,210,0.98) 50.5%,
+      rgba(200,255,140,0.35) 66%,
+      rgba(170,255,90,0.10) 82%,
+      rgba(170,255,90,0.00) 100%
+    );
 
   box-shadow:
-    0 0 8px rgba(190,255,120,0.25),
-    0 0 16px rgba(190,255,120,0.15);
+    0 0 2px rgba(245,255,230,0.95),
+    0 0 6px rgba(210,255,150,0.85),
+    0 0 14px rgba(190,255,120,0.55),
+    0 0 28px rgba(170,255,90,0.22);
 
-  animation: gridPulseSweep 15s linear infinite;
+  opacity: 0;
+  animation: laserSweep 22s linear infinite;
 }
 
-@keyframes gridPulseSweep {
-  from {
+@keyframes laserSweep {
+  0% {
     transform: translateX(0);
+    opacity: 0;
   }
-  to {
-    transform: translateX(calc(100vw + 24px));
+  1% {
+    opacity: 1;
+  }
+  31.818% {
+    transform: translateX(calc(100vw + 8px));
+    opacity: 1;
+  }
+  31.9% {
+    transform: translateX(calc(100vw + 8px));
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(calc(100vw + 8px));
+    opacity: 0;
+  }
+}
+
+@keyframes gridFlash {
+  0%,
+  31.818% {
+    background-image:
+      linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+    filter: drop-shadow(0 0 0 rgba(190,255,120,0));
+  }
+
+  33% {
+    background-image:
+      linear-gradient(rgba(190,255,120,0.55) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(190,255,120,0.55) 1px, transparent 1px);
+    filter: drop-shadow(0 0 6px rgba(190,255,120,0.35));
+  }
+
+  36.364% {
+    background-image:
+      linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+    filter: drop-shadow(0 0 0 rgba(190,255,120,0));
+  }
+
+  100% {
+    background-image:
+      linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+    filter: drop-shadow(0 0 0 rgba(190,255,120,0));
   }
 }
 
