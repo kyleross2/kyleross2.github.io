@@ -4,10 +4,6 @@ body {
   line-height: 1.6;
   color: #e5e7eb;
   background-color: #0f1115;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
-  background-size: 120px 36px;
 
   position: relative;
   overflow-x: hidden;
@@ -16,29 +12,42 @@ body {
 body::before {
   content: "";
   position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 120px 36px;
+}
+
+body::after {
+  content: "";
+  position: fixed;
   top: 0;
   left: -12px;
   width: 12px;
   height: 100vh;
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
 
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(170, 220, 255, 0.00) 15%,
-    rgba(170, 220, 255, 0.18) 40%,
-    rgba(210, 240, 255, 0.65) 50%,
-    rgba(170, 220, 255, 0.18) 60%,
-    rgba(170, 220, 255, 0.00) 85%,
+    rgba(190,255,120,0.00) 15%,
+    rgba(190,255,120,0.15) 40%,
+    rgba(210,255,140,0.35) 50%,
+    rgba(190,255,120,0.15) 60%,
+    rgba(190,255,120,0.00) 85%,
     transparent 100%
   );
 
   box-shadow:
-    0 0 10px rgba(180, 230, 255, 0.25),
-    0 0 18px rgba(180, 230, 255, 0.12);
+    0 0 8px rgba(190,255,120,0.25),
+    0 0 16px rgba(190,255,120,0.15);
 
-  animation: gridPulseSweep 6s linear infinite;
+  animation: gridPulseSweep 15s linear infinite;
 }
 
 @keyframes gridPulseSweep {
@@ -50,6 +59,14 @@ body::before {
   }
 }
 
+header,
+main,
+section,
+.card,
+footer {
+  position: relative;
+  z-index: 1;
+}
 
 header {
   background: #171b22;
@@ -88,9 +105,7 @@ section {
   padding: 1rem;
   border-radius: 8px;
   margin-top: 1rem;
-
   background: rgba(60,110,200,0.18);
-
   transition: all 0.2s ease;
 }
 
