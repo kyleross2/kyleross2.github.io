@@ -18,8 +18,10 @@ body::before {
 
   background-image:
     linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
-  background-size: 120px 36px;
+    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px),
+    radial-gradient(circle at top left, rgba(255,255,255,0) 0 1px, transparent 1.5px);
+  background-size: 120px 36px, 120px 36px, 120px 36px;
+  background-position: 0 0, 0 0, 0 0;
 
   animation: gridFlash 22s linear infinite;
 }
@@ -81,58 +83,83 @@ body::after {
 }
 
 @keyframes gridFlash {
-
-  /* normal grid before beam finishes */
-  0%, 31.818% {
+  0%,
+  31.818% {
     background-image:
       linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+      linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px),
+      radial-gradient(circle at top left, rgba(255,255,255,0) 0 1px, transparent 1.5px);
     filter:
       drop-shadow(0 0 0 rgba(190,255,120,0))
       brightness(1);
   }
 
-  /* strong initial pulse */
-  32% {
+  32.0% {
     background-image:
-      linear-gradient(rgba(170,255,90,0.85) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(170,255,90,0.85) 1px, transparent 1px);
+      linear-gradient(rgba(170,255,90,0.92) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(170,255,90,0.92) 1px, transparent 1px),
+      radial-gradient(circle at top left, rgba(235,255,210,1) 0 1.8px, rgba(170,255,90,0.35) 2.4px, transparent 3.2px);
     filter:
-      drop-shadow(0 0 8px rgba(210,255,150,0.6))
-      drop-shadow(0 0 18px rgba(170,255,90,0.35))
-      brightness(1.15);
+      drop-shadow(0 0 10px rgba(210,255,150,0.65))
+      drop-shadow(0 0 24px rgba(170,255,90,0.34))
+      brightness(1.16);
   }
 
-  /* gradual fade */
-  34% {
+  32.7% {
     background-image:
-      linear-gradient(rgba(170,255,90,0.45) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(170,255,90,0.45) 1px, transparent 1px);
+      linear-gradient(rgba(170,255,90,0.78) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(170,255,90,0.78) 1px, transparent 1px),
+      radial-gradient(circle at top left, rgba(235,255,210,0.82) 0 1.7px, rgba(170,255,90,0.28) 2.3px, transparent 3px);
     filter:
-      drop-shadow(0 0 4px rgba(210,255,150,0.3))
-      brightness(1.05);
+      drop-shadow(0 0 8px rgba(210,255,150,0.52))
+      drop-shadow(0 0 18px rgba(170,255,90,0.26))
+      brightness(1.11);
   }
 
-  36.364% {
+  33.5% {
     background-image:
-      linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+      linear-gradient(rgba(170,255,90,0.60) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(170,255,90,0.60) 1px, transparent 1px),
+      radial-gradient(circle at top left, rgba(235,255,210,0.62) 0 1.55px, rgba(170,255,90,0.22) 2.1px, transparent 2.8px);
     filter:
-      drop-shadow(0 0 0 rgba(190,255,120,0))
-      brightness(1);
+      drop-shadow(0 0 6px rgba(210,255,150,0.38))
+      drop-shadow(0 0 13px rgba(170,255,90,0.18))
+      brightness(1.07);
   }
 
-  /* idle until next cycle */
+  34.4% {
+    background-image:
+      linear-gradient(rgba(170,255,90,0.42) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(170,255,90,0.42) 1px, transparent 1px),
+      radial-gradient(circle at top left, rgba(235,255,210,0.42) 0 1.4px, rgba(170,255,90,0.16) 1.9px, transparent 2.6px);
+    filter:
+      drop-shadow(0 0 4px rgba(210,255,150,0.24))
+      drop-shadow(0 0 9px rgba(170,255,90,0.12))
+      brightness(1.04);
+  }
+
+  35.3% {
+    background-image:
+      linear-gradient(rgba(170,255,90,0.26) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(170,255,90,0.26) 1px, transparent 1px),
+      radial-gradient(circle at top left, rgba(235,255,210,0.24) 0 1.25px, rgba(170,255,90,0.10) 1.7px, transparent 2.3px);
+    filter:
+      drop-shadow(0 0 2px rgba(210,255,150,0.14))
+      drop-shadow(0 0 5px rgba(170,255,90,0.07))
+      brightness(1.02);
+  }
+
+  36.364%,
   100% {
     background-image:
       linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+      linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px),
+      radial-gradient(circle at top left, rgba(255,255,255,0) 0 1px, transparent 1.5px);
     filter:
       drop-shadow(0 0 0 rgba(190,255,120,0))
       brightness(1);
   }
 }
-
 
 header,
 main,
