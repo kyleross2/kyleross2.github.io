@@ -86,30 +86,40 @@ body::after {
     background-image:
       linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
       linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
-    filter: drop-shadow(0 0 0 rgba(190,255,120,0));
+    filter:
+      drop-shadow(0 0 0 rgba(190,255,120,0))
+      brightness(1);
   }
 
   33% {
     background-image:
-      linear-gradient(rgba(190,255,120,0.55) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(190,255,120,0.55) 1px, transparent 1px);
-    filter: drop-shadow(0 0 6px rgba(190,255,120,0.35));
+      linear-gradient(rgba(170,255,90,0.70) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(170,255,90,0.70) 1px, transparent 1px);
+    filter:
+      drop-shadow(0 0 4px rgba(210,255,150,0.35))
+      drop-shadow(0 0 10px rgba(170,255,90,0.20))
+      brightness(1.08);
   }
 
   36.364% {
     background-image:
       linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
       linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
-    filter: drop-shadow(0 0 0 rgba(190,255,120,0));
+    filter:
+      drop-shadow(0 0 0 rgba(190,255,120,0))
+      brightness(1);
   }
 
   100% {
     background-image:
       linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
       linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
-    filter: drop-shadow(0 0 0 rgba(190,255,120,0));
+    filter:
+      drop-shadow(0 0 0 rgba(190,255,120,0))
+      brightness(1);
   }
 }
+
 
 header,
 main,
