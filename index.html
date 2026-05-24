@@ -1,63 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kyle Ross | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kyle E. Ross portfolio showcasing data integration, automation, AI enablement, executive reporting, and transition operations accomplishments.">
+  <title>Kyle E. Ross | Data Integration, Automation & AI Enablement</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Kyle Ross</h1>
-    <p>Data Automation | Alteryx | Excel | AI Solutions</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#resume">Resume</a>
-      <a href="#contact">Contact</a>
+  <header class="site-header" id="home">
+    <nav class="top-nav section-shell" aria-label="Primary navigation">
+      <a class="brand" href="#home">KER</a>
+      <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+      <div class="nav-links">
+        <a href="#accomplishments">Accomplishments</a>
+        <a href="#categories">Focus Areas</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="button button-secondary resume-nav" href="C:\Users\17322\Documents\Kyle.Ross.Resume1.1.pdf">View Resume</a>
     </nav>
+
+    <section class="hero section-shell">
+      <div class="hero-copy">
+        <p class="eyebrow">Personal accomplishments portfolio</p>
+        <h1>Kyle E. Ross</h1>
+        <p class="hero-role">Data Integration | Automation | AI Enablement</p>
+        <p class="hero-text">I build scalable data workflows, automation tools, and operational reporting systems that reduce manual work and improve transition execution.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#accomplishments">Explore Work</a>
+          <a class="button button-secondary" href="#contact">Connect</a>
+        </div>
+      </div>
+      <div class="hero-panel" aria-label="Highlighted portfolio metrics">
+        <div class="metric-card large">
+          <span>17,000</span>
+          <p>Accounts supported in large-scale transition events</p>
+        </div>
+        <div class="metric-grid">
+          <div class="metric-card">
+            <span>5,000+</span>
+            <p>Accounts in scalable data intake build</p>
+          </div>
+          <div class="metric-card">
+            <span>80+</span>
+            <p>Associates trained on AI fundamentals</p>
+          </div>
+          <div class="metric-card">
+            <span>30%</span>
+            <p>Increase in AI tool adoption</p>
+          </div>
+          <div class="metric-card">
+            <span>$0</span>
+            <p>Static hosting cost on GitHub Pages</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </header>
 
   <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I build practical automation and reporting solutions using Alteryx,
-        Excel, and Artificial Intelligence.
-      </p>
+    <section class="accomplishments section-shell" id="accomplishments" aria-labelledby="accomplishments-title">
+      <div class="section-heading">
+        <p class="eyebrow">Impact snapshots</p>
+        <h2 id="accomplishments-title">Accomplishment Cards</h2>
+        <p>Click any card to expand the details, metrics, tools, and business impact behind the work.</p>
+      </div>
+
+      <div class="filter-bar" aria-label="Filter accomplishments by category">
+        <button class="filter-button is-active" type="button" data-filter="all">All</button>
+        <button class="filter-button" type="button" data-filter="data">Data Integration</button>
+        <button class="filter-button" type="button" data-filter="automation">Automation</button>
+        <button class="filter-button" type="button" data-filter="ai">AI Enablement</button>
+        <button class="filter-button" type="button" data-filter="reporting">Reporting</button>
+      </div>
+
+      <div class="card-grid">
+        <article class="accomplishment-card" data-category="data">
+          <button class="card-toggle" type="button" aria-expanded="false">
+            <span class="icon-box">🗄️</span>
+            <span class="card-summary">
+              <span class="card-title">Large-Scale Transition Data Lead</span>
+              <span class="card-metric">Up to 17,000 accounts</span>
+            </span>
+            <span class="toggle-indicator">View details</span>
+          </button>
+          <div class="card-details">
+            <div class="detail-grid">
+              <div>
+                <h3>What I actually did</h3>
+                <ul>
+                  <li>Led the data workstream for major advisor transition events.</li>
+                  <li>Migrated, validated, and reconciled large account populations.</li>
+                  <li>Supported compliance-sensitive client-facing delivery.</li>
+                  <li>Built repeatable quality-control processes.</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Business impact</h3>
+                <p>Improved execution confidence for complex transitions by combining structured migration workflows, reconciliation discipline, and clear operational readiness tracking.</p>
+                <div class="tag-row">
+                  <span>Data QA</span>
+                  <span>Transitions</span>
+                  <span>Reconciliation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="accomplishment-card" data-category="data">
+          <button class="card-toggle" type="button" aria-expanded="false">
+            <span class="icon-box">📋</span>
+            <span class="card-summary">
+              <span class="card-title">Scalable Advisor Data Intake Build</span>
+              <span class="card-metric">5,000+ accounts</span>
+            </span>
+            <span class="toggle-indicator">View details</span>
+          </button>
+          <div class="card-details">
+            <div class="detail-grid">
+              <div>
+                <h3>What I actually did</h3>
+                <ul>
+                  <li>Designed a survey-based onboarding solution.</li>
+                  <li>Improved how breakaway advisor data was captured.</li>
+                  <li>Reduced friction in the transition process.</li>
+                  <li>Created a structured intake model for downstream use.</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Business impact</h3>
+                <p>Created a more scalable front door for advisor data, making incoming information easier to validate, route, report, and operationalize.</p>
+                <div class="tag-row">
+                  <span>Onboarding</span>
+                  <span>Workflow Design</span>
+                  <span>Data Intake</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="accomplishment-card" data-category="automation ai reporting">
+          <button class="card-toggle" type="button" aria-expanded="false">
+            <span class="icon-box">🤖</span>
+            <span class="card-summary">
+              <span class="card-title">AI-Powered Automation Agents</span>
+              <span class="card-metric">Executive reporting + event tracking</span>
+            </span>
+            <span class="toggle-indicator">View details</span>
+          </button>
+          <div class="card-details">
+            <div class="detail-grid">
+              <div>
+                <h3>What I actually did</h3>
+                <ul>
+                  <li>Built AI-assisted automation agents.</li>
+                  <li>Improved executive reporting workflows.</li>
+                  <li>Reduced manual data processing.</li>
+                  <li>Enhanced tracking of event-level analytics.</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Business impact</h3>
+                <p>Reduced manual coordination effort and made operational updates easier to summarize, package, and share with leadership stakeholders.</p>
+                <div class="tag-row">
+                  <span>AI Agents</span>
+                  <span>Automation</span>
+                  <span>Event Analytics</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="accomplishment-card" data-category="reporting">
+          <button class="card-toggle" type="button" aria-expanded="false">
+            <span class="icon-box">📊</span>
+            <span class="card-summary">
+              <span class="card-title">Executive and Operational Analytics</span>
+              <span class="card-metric">Executive + row-level reporting</span>
+            </span>
+            <span class="toggle-indicator">View details</span>
+          </button>
+          <div class="card-details">
+            <div class="detail-grid">
+              <div>
+                <h3>What I actually did</h3>
+                <ul>
+                  <li>Created reporting for leadership and operations.</li>
+                  <li>Supported high-level rollups and detailed workflows.</li>
+                  <li>Translated complex data into usable business insights.</li>
+                  <li>Built repeatable views for tracking transition progress.</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Business impact</h3>
+                <p>Helped stakeholders move from raw operational data to action-oriented status views, risks, and next steps.</p>
+                <div class="tag-row">
+                  <span>Dashboards</span>
+                  <span>Excel</span>
+                  <span>Leadership Reporting</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="accomplishment-card" data-category="ai">
+          <button class="card-toggle" type="button" aria-expanded="false">
+            <span class="icon-box">🧠</span>
+            <span class="card-summary">
+              <span class="card-title">AI Training and Enablement</span>
+              <span class="card-metric">80+ associates trained</span>
+            </span>
+            <span class="toggle-indicator">View details</span>
+          </button>
+          <div class="card-details">
+            <div class="detail-grid">
+              <div>
+                <h3>What I actually did</h3>
+                <ul>
+                  <li>Delivered AI fundamentals training.</li>
+                  <li>Covered prompt engineering and practical use cases.</li>
+                  <li>Helped drive a 30% increase in AI tool adoption.</li>
+                  <li>Translated technical concepts into everyday workflows.</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Business impact</h3>
+                <p>Raised team confidence with AI tools by focusing on practical prompts, repeatable use cases, and responsible workflow integration.</p>
+                <div class="tag-row">
+                  <span>Training</span>
+                  <span>Prompt Engineering</span>
+                  <span>Enablement</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="accomplishment-card" data-category="automation">
+          <button class="card-toggle" type="button" aria-expanded="false">
+            <span class="icon-box">⚙️</span>
+            <span class="card-summary">
+              <span class="card-title">Alteryx and Excel Workflow Automation</span>
+              <span class="card-metric">Manual work reduction</span>
+            </span>
+            <span class="toggle-indicator">View details</span>
+          </button>
+          <div class="card-details">
+            <div class="detail-grid">
+              <div>
+                <h3>What I actually did</h3>
+                <ul>
+                  <li>Built repeatable Alteryx and Excel workflows.</li>
+                  <li>Standardized recurring data preparation tasks.</li>
+                  <li>Improved consistency across operational outputs.</li>
+                  <li>Reduced avoidable manual handling and rework.</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Business impact</h3>
+                <p>Made recurring reporting and data preparation more reliable by turning manual steps into reusable automation patterns.</p>
+                <div class="tag-row">
+                  <span>Alteryx</span>
+                  <span>Excel</span>
+                  <span>Process Improvement</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="card">
-        <h3>Transition Event Reporting</h3>
-        <p>Built reporting and tracking solutions for large-scale account transition events.</p>
+    <section class="categories section-shell" id="categories" aria-labelledby="categories-title">
+      <div class="section-heading">
+        <p class="eyebrow">Core project categories</p>
+        <h2 id="categories-title">Where I Create Value</h2>
       </div>
-      <div class="card">
-        <h3>Survey-Based Data Collection Tool</h3>
-        <p>Designed a structured intake process to revamp breakaway transition process.</p>
-      </div>
-      <div class="card">
-        <h3>Automation & Executive Reporting</h3>
-        <p>Used AI and analytics tools to produce insights tailored to both executive leadership dashboards and detailed operational workflows.</p>
+      <div class="category-grid">
+        <article>Data Integration</article>
+        <article>Automation</article>
+        <article>AI Enablement</article>
+        <article>Executive Reporting</article>
+        <article>Client-Facing Operations</article>
+        <article>Process Improvement</article>
       </div>
     </section>
 
-    <section id="resume">
-      <h2>Resume</h2>
-      <a href="Kyle.Ross.Resume.pdf" target="_blank">View Resume (PDF)</a>
+    <section class="resume section-shell" id="resume" aria-labelledby="resume-title">
+      <div class="resume-panel">
+        <div>
+          <p class="eyebrow">Resume</p>
+          <h2 id="resume-title">Full Experience Snapshot</h2>
+          <p>Use the buttons below after adding <code>Kyle.Ross.Resume.pdf</code> to this folder. The site is ready for GitHub Pages and does not require a backend.</p>
+        </div>
+        <div class="resume-actions">
+          <a class="button button-primary" href="Kyle.Ross.Resume.pdf">View Resume</a>
+          <a class="button button-secondary" href="Kyle.Ross.Resume.pdf" download>Download Resume</a>
+        </div>
+      </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: kyleross2@me.com</p>
-      <p>Phone: 732-284-1896</p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/kyle-ross-599181215/" target="_blank">View my LinkedIn</a></p>
+    <section class="contact section-shell" id="contact" aria-labelledby="contact-title">
+      <div class="contact-panel">
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-title">Let’s Connect</h2>
+        <p>Add your preferred email, LinkedIn, and GitHub Pages link here when ready.</p>
+        <div class="contact-links">
+          <a href="mailto:your.email@example.com">your.email@example.com</a>
+          <a href="#" aria-label="LinkedIn profile placeholder">LinkedIn</a>
+          <a href="#" aria-label="GitHub Pages portfolio placeholder">GitHub Pages</a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>© 2026 Kyle Ross</p>
+  <footer class="site-footer">
+    <p>© 2026 Kyle E. Ross. Built with HTML, CSS, and JavaScript.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
