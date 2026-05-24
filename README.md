@@ -29,7 +29,7 @@ kyle-ross-personal-website/
 ├── styles.css
 ├── script.js
 ├── README.md
-└── Kyle.Ross.Resume.pdf
+└── Kyle.Ross.Resume1.1.pdf
 ```
 
 ## Local Preview
@@ -41,7 +41,7 @@ Open `index.html` directly in a browser, or run a simple static server from this
 Add your resume PDF to this folder with this exact filename:
 
 ```text
-Kyle.Ross.Resume.pdf
+Kyle.Ross.Resume1.1.pdf
 ```
 
 The View Resume and Download Resume buttons will work after that file is added.
