@@ -27,7 +27,7 @@ body {
       rgba(7, 17, 31, 0.45),
       rgba(7, 17, 31, 0.65)
     ),
-    url("ChatGPT Image May 29, 2026, 08_42_30 PM.png");
+    url("./background.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
