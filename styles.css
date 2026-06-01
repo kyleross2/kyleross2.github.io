@@ -23,7 +23,11 @@ html {
 body {
   margin: 0;
   color: var(--text);
-  background-image: url("./background.png");
+  background-image: linear-gradient(
+      rgba(15, 35, 65, 0.15),
+      rgba(15, 35, 65, 0.25)
+    ),
+    url("./background.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
