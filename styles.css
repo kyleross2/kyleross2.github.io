@@ -260,7 +260,7 @@ h3 {
 .metric-card {
   min-height: 118px;
   padding: 16px;
-  border: 2px solid rgba(7, 17, 31, 0.35);
+  border: 2px solid #334155;
   box-shadow: 0 8px 24px rgba(7, 17, 31, 0.12);
   border-radius: 24px;
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
