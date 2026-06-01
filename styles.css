@@ -4,7 +4,7 @@
   --panel: rgba(15, 31, 52, 0.78);
   --panel-strong: #12233a;
   --text: #07111f;
-  --muted: #9fb2c8;
+  --muted: #334155;
   --accent: #61f2b5;
   --accent-blue: #63a7ff;
   --line: rgba(255, 255, 255, 0.12);
@@ -19,9 +19,10 @@ html {
   scroll-behavior: smooth;
 }
 
+
 body {
   margin: 0;
-  color: #000;
+  color: var(--text);
   background-image: url("./background.png");
   background-size: cover;
   background-position: center center;
@@ -31,7 +32,12 @@ body {
 }
 
 body::before {
-  display: none;
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.62);
+  z-index: -1;
 }
 
 a {
@@ -555,4 +561,20 @@ h3 {
   .contact {
     padding: 52px 0;
   }
+  h1,
+  h2,
+  h3,
+  .card-title,
+  .metric-card span,
+  .contact-links a {
+  color: #07111f;
+}
+
+.hero-text,
+.section-heading p,
+.card-details p,
+.card-details li,
+.metric-card p {
+  color: #334155;
+}
 }
